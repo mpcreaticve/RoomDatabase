@@ -1,0 +1,58 @@
+<com.zerobranch.layout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_marginTop="3dp"
+    app:draggedItem="@id/ll"
+    app:leftItem="@id/left_view"
+    app:rightItem="@id/right_view"
+    app:swipeDirection="left|right">
+
+    <ImageView
+        android:id="@+id/left_view"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ff5722"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:src="@drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/right_view"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#ff5722"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:src="@drawable/ic_delete" />
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/drag_item"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eeeeee"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+</com.zerobranch.layout.SwipeLayout>
